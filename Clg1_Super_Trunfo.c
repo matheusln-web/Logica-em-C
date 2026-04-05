@@ -4,7 +4,7 @@ int main(){
     char  cod_carta1[10], cod_carta2[10], nome_cid1[50], nome_cid2[50], estad_carta1, estad_carta2;
     int populacao1, populacao2, pontos_tur1, pontos_tur2;
     float area1, area2, pib1, pib2;
-// Leitura de informações da primeira carta.
+// Leitura das informações da primeira carta.
     printf("Insira os dados da 1° carta\n");
     printf("Estado: ");
     scanf(" %c", &estad_carta1);
@@ -21,7 +21,7 @@ int main(){
     printf("Pontos turisticos: ");
     scanf("%d", &pontos_tur1);
     printf("\n");
-//Leitura de informações da segunda carta.
+//Leitura das informações da segunda carta.
     printf("Insira os dados da 2° carta: \n");
     printf("Estado: ");
     scanf(" %c", &estad_carta2);
