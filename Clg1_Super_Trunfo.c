@@ -3,10 +3,11 @@
 int main(){
     char  cod_carta1[10], cod_carta2[10], nome_cid1[50], nome_cid2[50], estad_carta1, estad_carta2;
     int populacao1, populacao2, pontos_tur1, pontos_tur2;
-    float area1, area2, pib1, pib2, densi_pop1, densi_pop2, pib_cap1, pib_cap2, conver_pib1, conver_pib2;
+    double area1, area2, pib1, pib2, densi_pop1, densi_pop2, pib_cap1, pib_cap2, conver_pib1, conver_pib2;
+    double super_poder1, super_poder2;
 // Leitura das informações da primeira carta.
-    printf("Insira os dados da 1° carta\n");
-    printf("Estado: ");
+    printf("Insira os dados da 1° carta:\n");
+    printf("Estado:");
     scanf(" %c", &estad_carta1);
     printf("Codigo: ");
     scanf("%s", cod_carta1);
@@ -15,9 +16,9 @@ int main(){
     printf("População: ");
     scanf("%d", &populacao1);
     printf("Area: ");
-    scanf("%f", &area1);
+    scanf("%lf", &area1);
     printf("PIB: ");
-    scanf("%f", &pib1);
+    scanf("%lf", &pib1);
     printf("Pontos turisticos: ");
     scanf("%d", &pontos_tur1);
     printf("\n");
@@ -32,9 +33,9 @@ int main(){
     printf("População: ");
     scanf("%d", &populacao2);
     printf("Area: ");
-    scanf("%f", &area2);
+    scanf("%lf", &area2);
     printf("PIB: ");
-    scanf("%f", &pib2);
+    scanf("%lf", &pib2);
     printf("Pontos turisticos: ");
     scanf("%d", &pontos_tur2);
     printf("\n");
@@ -45,6 +46,8 @@ int main(){
     densi_pop2 = populacao2 / area2;
     pib_cap1 = conver_pib1 / populacao1;
     pib_cap2 = conver_pib2 / populacao2;
+    super_poder1 = populacao1 + area1 + conver_pib1 + densi_pop1;
+    super_poder2 = populacao2 + area2 + conver_pib2 + densi_pop2;
 
 //Mostrar dados da primeira carta.
     printf("Carta 1\n");
@@ -53,10 +56,11 @@ int main(){
     printf("Nome da Cidade: %s\n", nome_cid1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f Km²\n", area1);
-    printf("PIB: R$%.2f bilhões\n", pib1);
+    printf("PIB: R$%.2f Bilhões\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos_tur1);
     printf("Densidade Populacional: %.2fhab/km²\n", densi_pop1);
     printf("PIB per Capita: %.2f Reais\n", pib_cap1);
+    printf("Super poder: %.2f", super_poder1);
     printf("\n");
 //Mostrar dados da segunda carta.
     printf("Carta 2\n");
@@ -69,6 +73,7 @@ int main(){
     printf("Número de Pontos Turísticos: %d\n", pontos_tur2);
     printf("Densidade Populacional: %.2fhab/km²\n", densi_pop2);
     printf("PIB per Capita: %.2f Reais\n", pib_cap2);
+    printf("Super poder: %.2f", super_poder2);
 
     return 0;
 }
